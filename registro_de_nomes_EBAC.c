@@ -179,7 +179,7 @@ int main()
 		//tela de menu
 		printf("Digite o número da opção desejada:\n\n");
 	
-		printf("\tDigite 1 para cadastrar novo Nome.\n\n\tDigite 2 para consultar os dados. \n\n\tDigite 3 para excluir um cadastro.\n\n\n\n");//opções a serem escolhidas
+		printf("\tDigite 1 para cadastrar novo Nome.\n\n\tDigite 2 para consultar os dados. \n\n\tDigite 3 para excluir um cadastro.\n\n\tDigite 4 para sair do sistema.\n\n\n\n");//opções a serem escolhidas
 	
 		printf("Opção: ");
 		scanf("%d", &escolha);//esperando o usuario escolher a opção
@@ -199,6 +199,11 @@ int main()
 			
 			case 3:
 				deletar();//chamada de função deletar
+			break;
+			
+			case 4:
+				printf("Obrigado por usar este sistema!!");
+				return 0;
 			break;
 			
 			default:
