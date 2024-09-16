@@ -216,50 +216,72 @@ int main()
 	int escolha = 0;
 	char sair[3];
 	int loop = 1;
+	char senhadigitada[10] = "a";
+	int comparacao = 1;
 	
-	for(loop =1;loop=1;)
+	printf("########  Registro de Nomes EBAC  ########\n\n");
+	
+	printf("acesso do adiministrador\n");
+	printf("Digite a senha: ");
+	scanf("%s", senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	
+	if(comparacao == 0)
 	{
-		
-		system("cls");//limpa a tela
-		
-		setlocale(LC_ALL, "portuguese");
-	
-		printf("########  Registro de Nomes EBAC  ########\n\n");//titulo da aplicação
-		
-		//tela de menu
-		printf("Digite o número da opção desejada:\n\n");
-	
-		printf("\tDigite 1 para cadastrar novo Nome.\n\n\tDigite 2 para consultar os dados. \n\n\tDigite 3 para excluir um cadastro.\n\n\tDigite 4 para sair do sistema.\n\n\n\n");//opções a serem escolhidas
-	
-		printf("Opção: ");
-		scanf("%d", &escolha);//esperando o usuario escolher a opção
-		
-		system("cls");//limpa a tela
-	
-		switch(escolha)//inicio da escolha
+		for(loop =1;loop=1;)
 		{
 		
-			case 1:
-				registro();//chamda de função registro
-			break;
+			system("cls");//limpa a tela
+		
+			setlocale(LC_ALL, "portuguese");
+	
+			printf("########  Registro de Nomes EBAC  ########\n\n");//titulo da aplicação
+		
+			//tela de menu
+			printf("Digite o número da opção desejada:\n\n");
+	
+			printf("\tDigite 1 para cadastrar novo Nome.\n\n\tDigite 2 para consultar os dados. \n\n\tDigite 3 para excluir um cadastro.\n\n\tDigite 4 para sair do sistema.\n\n\n\n");//opções a serem escolhidas
+	
+			printf("Opção: ");
+			scanf("%d", &escolha);//esperando o usuario escolher a opção
+		
+			system("cls");//limpa a tela
+	
+			switch(escolha)//inicio da escolha
+			{
+		
+				case 1:
+					registro();//chamda de função registro
+				break;
 			
-			case 2:
-				consulta();//chamada de função consulta
-			break;
+				case 2:
+					consulta();//chamada de função consulta
+				break;
 			
-			case 3:
-				deletar();//chamada de função deletar
-			break;
+				case 3:
+					deletar();//chamada de função deletar
+				break;
 			
-			case 4:
-				printf("Obrigado por usar este sistema!!");
-				return 0;
-			break;
+				case 4:
+					printf("Obrigado por usar este sistema!!");
+					return 0;
+				break;
 			
-			default:
-				printf("\tOpção não esta disponivel no menu.\n\n\n");//fim da escolha
-				system("pause");
-			break;
+				default:
+					printf("\tOpção não esta disponivel no menu.\n\n\n");//fim da escolha
+					system("pause");
+				break;
+			}
 		}
 	}
+	else
+	{
+		printf("senha errada.");
+	}
+	
+	
+	
+
 }
